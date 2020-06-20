@@ -1,0 +1,12 @@
+#aqui se suben las localidades de los programas
+#no borrar
+carpeta_ordenar=C:\Users\Martin Pasche
+
+#se puede modificar, segun extension
+#si se quiere añadir mas de una extension por carpeta, se separa por guion
+#.pdf-.jar-.txt
+
+.pdf = C:\Users\Martin Pasche\Desktop\pdf
+.jar = C:\Users\Martin Pasche\Desktop\miscelaneos
+
+
