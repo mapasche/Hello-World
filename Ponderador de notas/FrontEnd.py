@@ -84,9 +84,17 @@ class RamoLayout(QHBoxLayout):
         boton = QPushButton('Añadir Nota')
         boton.clicked.connect(self.anadir_nota)
         vnotas.addWidget(boton)
+
+        mini_lay = QHBoxLayout()
         boton = QPushButton('Reiniciar')
         boton.clicked.connect(self.reiniciar)
-        vnotas.addWidget(boton)
+        mini_lay.addWidget(boton)
+
+        boton = QPushButton('Borrar Nota')
+        boton.clicked.connect(self.borrar)
+        mini_lay.addWidget(boton)
+
+        vnotas.addLayout(mini_lay)
         vnotas.addStretch() 
         
         self.addLayout(vnotas)
@@ -112,7 +120,38 @@ class RamoLayout(QHBoxLayout):
     
     
     def reiniciar(self):
-        print("reiniciando")
+
+        for i in self.notas:
+            i.itemAt(1).widget().setText("")
+            i.itemAt(3).widget().setText("")
+
+
+    def borrar(self):
+
+        if len(self.notas) > 0:
+
+            child = self.takeAt(1)
+            self.notas.remove(child)
+
+            while child.layout().count():
+
+                child_child = child.layout().takeAt(0)
+                    
+                if child_child.widget():
+                    child_child.widget().deleteLater()
+                
+                elif child_child.spacerItem():
+                    child.layout().removeItem(child_child)
+                    del child_child
+
+                else:
+                    raise Exception("Error con los objetos del layout")
+
+            del child
+                
+            self.update()
+
+    
           
         
 class NotaLayout(QVBoxLayout):
@@ -130,9 +169,33 @@ class NotaLayout(QVBoxLayout):
         linea_edit.setPlaceholderText("70")
         self.addWidget(linea_edit)
         self.addStretch()
-        
-        
 
+
+
+
+
+"""
+def borrar_layout(layout):
+    print(layout)
+    while layout.count():
+        child = layout.takeAt(0)
+
+        if child.layout():
+            borrar_layout(child.layout())
+            
+        elif child.widget():
+            child.widget().deleteLater()
+        
+        elif child.spacerItem():
+            layout.removeItem(child)
+            del child
+
+        else:
+            raise Exception("Error con los objetos del layout")
+    
+    del layout
+    return    
+"""
 
 
 if __name__ == "__main__":
