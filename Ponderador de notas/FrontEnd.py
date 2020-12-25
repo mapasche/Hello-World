@@ -2,9 +2,23 @@ from PyQt5.QtWidgets import QApplication, QLabel, QWidget, QLineEdit, QHBoxLayou
 from PyQt5 import uic
 from PyQt5.QtCore import QObject, pyqtSignal
 import sys
+import os
 from BackEnd import PonderadorNotas
 
-main_window, main_window_class = uic.loadUiType("Main.ui")
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+
+
+main_window, main_window_class = uic.loadUiType(resource_path('Main.ui'))
 
 class  MainWindow (main_window, main_window_class):
     
@@ -198,12 +212,20 @@ def borrar_layout(layout):
 """
 
 
+
+
+
+
+
+
 if __name__ == "__main__":
     
     def hook(type, value, traceback):
         print(type)
         print(traceback)
         sys.__except__ = hook
+
+
     
     
     app = QApplication([])
