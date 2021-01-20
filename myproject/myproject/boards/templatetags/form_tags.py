@@ -1,4 +1,10 @@
 from django import template
+from urllib.parse import urlencode
+from django import template
+from django.conf import settings
+
+import hashlib
+
 
 register = template.Library()
 
@@ -15,3 +21,5 @@ def input_class(bound_field):
         elif field_type(bound_field) != 'PasswordInput':
             css_class = 'is-valid'
     return 'form-control {}'.format(css_class)
+
+
