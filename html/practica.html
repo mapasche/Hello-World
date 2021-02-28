@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <title>A Meaningful Page Title</title>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="Practica 1 html">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Martin Pasche">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- tamaño de pantalla para celulares y pc-->
+
+
+  <link rel="stylesheet" href="styles2.css">
+
+
+
+  <style>
+    a:link {
+      color: green;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    
+    a:visited {
+      color: pink;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      color: red;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    
+    a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 15px;
+    }
+    th {
+        text-align: left;
+    }
+    #t02 {
+        width: 100%;
+        background-color: #f1f1c1;
+    }
+    #t02 tr:nth-child(even) {
+        background-color: #eee;
+    }
+    #t02 tr:nth-child(odd) {
+        background-color: #fff;
+    }
+
+    .city {
+      background-color: tomato;
+      color: white;
+      padding: 10px;
+    }
+
+
+    </style> <!-- .nombre es una clase -->
+</head>
+
+<body style="background-color: rgb(218, 255, 255);">
+
+<h1 style="font-size:60px; text-align:center; color:dodgerblue;">My First Heading</h1>
+<br>
+<p style="font-size:3vw;">My first paragraph. <br> And my first sentence after a br</p>
+<p style="font-size:160%; background-color: tomato;" title="im a title">Pon el mouse encima mio</p> 
+
+
+<a href="https://www.w3schools.com" title="Go to W3Schools HTML section" target="_blank">
+<img id="I1" src="image/imagen.png" alt="watching the void wiht god" width="200" height="200">
+</a>
+<!-- mejor usar style para definir tamaño de la imagen      -->
+<img src="image/imagen2.png" alt="Girl in a jacket" style="width:500px;height:300px;float:right;">
+<!-- Esto es un comentario, uwuuuu -->
+
+
+<h1>Hello</h1>
+<p>Its a website</p>
+<hr>
+
+<h2 style="color: rgb(36, 153, 0);">Hello2</h2>
+
+<p style="font-family:courier;">pre mantiene el formato del texto</p>
+<pre>
+    My Bonnie lies over the ocean.
+  
+    My Bonnie lies over the sea.
+  
+    My Bonnie lies over the ocean.
+  
+    Oh, bring back my Bonnie to me.
+  </pre>
+
+<h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
+
+<p style="border:2px solid violet">
+    <b>Bold</b>
+    <strong>Strong</strong>
+    <i>Italic</i>
+    <em>Emphasized</em>
+    <small>small</small>
+    <del>Deleted</del>
+    <ins>Insertado</ins>7
+    <sub>Subscript</sub>
+    <sup>superscript</sup>
+    <mark>Marcado</mark>
+</p>
+
+
+<p>Here is a quote from WWF's website:</p>
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+For 50 years, WWF has been protecting the future of nature.
+The world's leading conservation organization,
+WWF works in 100 countries and is supported by
+1.2 million members in the United States and
+close to 5 million globally.
+</blockquote>
+
+<p>Small quotation con q</p>
+<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+
+<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+<address>
+    Written by John Doe.<br>
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+</address>
+
+<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+<bdo dir="rtl">This text will be written from right to left</bdo>
+
+<br>
+<a href="mailto:someone@example.com">Send email</a>
+
+<button onclick="document.location='default.asp'">HTML Tutorial</button>
+
+<br>
+<a href="html_demo.html#C4">Jump to Chapter 4 on another page</a>
+<br>
+<a href="#I1">Ir a la imagen de arriba</a>
+
+<br>
+<p>Clickea el hoyo negro</p>
+<img src="image/imagen3.png" alt="Hoyo negro" style="width: 400px;height:250px;" usemap="#mapacirculo">
+
+<map name="mapacirculo">
+    <area shape="circle" coords="200,125,50" atl="Hoyo" href="#I1">
+</map>
+
+
+<div style="background-color:black;color:white;padding:20px;">
+  <h2>London</h2>
+  <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+
+<p>My mother has <span style="color:blue;font-weight:bold">blue</span> eyes and my father has <span style="color:darkolivegreen;font-weight:bold">dark green</span> eyes.</p>
+
+
+
+<div style="background-image: url('image/imagen4.jpg');">
+    <p style="color:aqua">HOlaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+</div>
+
+<table style="width: 100%;">
+    <caption>Listado</caption>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th colspan="2">Edad</th>
+    </tr>
+    <tr>
+        <td>Martin</td>
+        <td>Pasche</td>
+        <td>20</td>
+        <td>20</td>
+    </tr>
+</table>
+
+<br>
+
+<table id="t02">
+    <tr>
+      <th>Name:</th>
+      <td>Bill Gates</td>
+    </tr>
+    <tr>
+      <th rowspan="2">Telephone:</th>
+      <td>55577854</td>
+    </tr>
+    <tr>
+      <td>55577855</td>
+    </tr>
+  </table>
+
+
+<br>
+
+<ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>
+
+<ul style="list-style-type:disc;">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>
+
+<ul style="list-style-type:circle;">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>
+<ul style="list-style-type:square;">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>
+<ul style="list-style-type:none;">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>
+<ul>
+    <li>Coffee</li>
+    <li>Tea
+      <ul>
+        <li>Black tea</li>
+        <li>Green tea</li>
+      </ul>
+    </li>
+    <li>Milk</li>
+  </ul>
+
+
+<dl>
+    <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+</dl>
+
+<ol>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ol>
+<ol type="1">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol>
+  <ol type="A">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol>
+  <ol type="a">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol>
+  <ol type="I">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol>
+  <ol type="i">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol>
+  <ol start="50">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol>
+
+<iframe src="practica_4.html" style="border:none;height:200px;width:300px;" title="Pagina web 4" name="iframe_a"></iframe>
+
+<p><a href="practica_2.html" target="iframe_a">Practica 2</a></p>
+
+
+
+
+<!-- Escoje una imagen que se ajuse al browser-->
+<picture>
+    <source media="(min-width: 650px)" srcset="image/imagen.png">
+    <source media="(min-width: 465px)" srcset="image/imagen2.png">
+    <img src="image/imagen3.png" alt="Beatles" style="max-width: 100%;height: auto;">
+</picture>
+
+</body>
+</html>
